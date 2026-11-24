@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brunel Belloni | Portfólio</title>
+  <meta name="description" content="Portfólio de Brunel Belloni, estudante de Engenharia de Software na UDF em Brasília. Em português, francês e inglês.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MENU DO TOPO -->
+  <header class="topo">
+    <a class="logo" href="#inicio">Brunel<span>.</span></a>
+    <nav class="menu">
+      <a href="#about" data-i="n1"></a>
+      <a href="#skills" data-i="n2"></a>
+      <a href="#projects" data-i="n3"></a>
+      <a href="#me" data-i="n5"></a>
+      <a href="#terminal" data-i="n4"></a>
+    </nav>
+    <div class="lang">
+      <button data-l="pt" class="on">PT</button>
+      <button data-l="fr">FR</button>
+      <button data-l="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <p class="prompt">~/brunel $ <span id="ty"></span><span class="cursor"></span></p>
+        <h1>Brunel<br><em>Belloni</em></h1>
+        <p class="role" data-i="role"></p>
+        <p class="loc" data-i="loc"></p>
+        <div class="botoes">
+          <a class="btn" href="#projects" data-i="b1"></a>
+          <a class="btn btn-linha" href="#terminal" data-i="b2"></a>
+        </div>
+      </div>
+      <div class="hero-foto">
+        <div class="foto" id="ph" title="">
+          <img id="phimg" src="img/foto.jpeg" alt="Foto de Brunel Belloni">
+          <span class="foto-dica" data-i="ph"></span>
+        </div>
+        <input type="file" id="pf" accept="image/*" hidden>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="about" class="secao revelar">
+      <h2 data-i="h1"></h2>
+      <div class="sobre">
+        <p class="texto" data-i="about"></p>
+        <pre class="codigo"><span class="k">const</span> brunel = {
+  name: <span class="s">"Brunel Belloni"</span>,
+  age: <span class="n">20</span>,
+  study: <span class="s">"Software Engineering @ UDF"</span>,
+  city: <span class="s">"Brasília, DF"</span>,
+  languages: [<span class="s">"Português"</span>, <span class="s">"Français"</span>, <span class="s">"English"</span>],
+  status: <span class="s" id="st"></span>
+};</pre>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="secao revelar">
+      <h2 data-i="h2"></h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+      <p class="nota" data-i="learn"></p>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projects" class="secao revelar">
+      <h2 data-i="h3"></h2>
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Descubra o Brasil</h3>
+          <p data-i="p1"></p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Social App</h3>
+          <p data-i="p2"></p>
+          <div class="tags"><span data-i="idea"></span></div>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>brunel.dev</h3>
+          <p data-i="p3"></p>
+          <div class="tags"><span>PT · FR · EN</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JORNADA -->
+    <section class="secao revelar">
+      <h2 data-i="h4"></h2>
+      <ol class="jornada">
+        <li><b>2026</b><span data-i="t1"></span></li>
+        <li><b>2026</b><span data-i="t2"></span></li>
+        <li><b>∞</b><span data-i="t3"></span></li>
+      </ol>
+    </section>
+
+    <!-- MEU ESPAÇO -->
+    <section id="me" class="secao revelar">
+      <h2 data-i="h6"></h2>
+      <div class="espaco">
+        <div class="caixa">
+          <label for="spin" data-i="sp1"></label>
+          <div class="linha">
+            <input id="spin" placeholder="https://open.spotify.com/track/..." autocomplete="off">
+            <button class="btn" id="spgo" data-i="spbtn"></button>
+          </div>
+          <div id="spbox"></div>
+          <a class="link" id="spopen" target="_blank" rel="noopener" data-i="spopen" hidden></a>
+        </div>
+        <div class="caixa">
+          <p data-i="acc"></p>
+          <div class="cores" id="swb"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section id="terminal" class="secao revelar">
+      <h2 data-i="h5"></h2>
+      <div class="terminal">
+        <div class="barra"><i></i><i></i><i></i><span>bash — brunel</span></div>
+        <div id="out"></div>
+        <div class="entrada">
+          <span>$</span>
+          <input id="cli" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal">
+        </div>
+      </div>
+      <div class="chips">
+        <button>help</button><button>about</button><button>skills</button>
+        <button>projects</button><button>langs</button><button>clear</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">Brunel Belloni · Brasília, DF · 2026</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
